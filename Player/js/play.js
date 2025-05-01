@@ -9,13 +9,6 @@ angular.module("application", []).controller("controller",
 		
 		$scope.alert = {class:"alert-warning", message:"يرجى الانتظار"};
 		
-		$scope.user = new Object();
-		$scope.user.letters = new Array();
-		$scope.user.state = new Object();
-		$scope.user.rounds = new Object();
-		
-		$scope.questions = new Array();
-		
 		$scope.role = null;
 		
 		$scope.userId = null;
