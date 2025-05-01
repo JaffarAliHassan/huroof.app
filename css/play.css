@@ -1,0 +1,496 @@
+:root {
+    --primary-color: #0d6efd;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+* {
+    direction: rtl;
+}
+
+.site-header {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+	z-index: 1040 !important;
+}
+
+.logo-link img {
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover img {
+    transform: scale(1.05);
+}
+
+.game-board {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-board:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+.hex-table {
+    overflow: hidden;
+    background-color: var(--dark-color);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.hex-row {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: -2%;
+    margin-right: -2%;
+}
+
+.hex {
+    font-family: 'El Messiri', 'Tajawal', sans-serif;
+    position: relative;
+    width: 14.3%;
+    padding: 5% 0;
+    background-color: #FDFFCD;
+    margin: .2rem calc(1.1% + .2rem);
+    font-size: clamp(1.5rem, 7.5vw, 3rem);
+    text-align: center;
+    line-height: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.hex:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+    z-index: 1;
+}
+
+.hex:nth-child(even) {
+    margin-top: -5%;
+    margin-bottom: calc(5% + 0.4rem);
+}
+
+.hex:after, .hex:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 22%;
+    height: 100%;
+    background: inherit;
+    transition: inherit;
+}
+
+.hex:before {
+    left: -20%;
+    clip-path: polygon(90% 0, 100% 0%, 100% 100%, 90% 100%, 0% 50%);
+}
+
+.hex:after {
+    right: -20%;
+    clip-path: polygon(0 0, 10% 0, 100% 50%, 10% 100%, 0 100%);
+}
+
+/* Cards & Controls */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.answer-first {
+    font-weight: bold;
+    border-width: 3px;
+    height: clamp(200px, 50vh, 500px);
+    font-size: clamp(2rem, 10vw, 5rem);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.answer-first:hover {
+    transform: scale(1.02);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+}
+
+/* Forms */
+.form-control {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}
+
+.star-rating {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.star-rating i {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.star-rating i:hover {
+    transform: scale(1.2);
+}
+
+.modal-content {
+    border: none;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+@media (max-width: 576px) {
+    .hex {
+        font-size: clamp(1rem, 5vw, 1.5rem);
+    }
+    
+    .answer-first {
+        height: clamp(150px, 40vh, 300px);
+        font-size: clamp(1.5rem, 8vw, 3rem);
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.alert, .card, .modal-content {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.rtl{
+    direction:rtl;
+}
+
+.ltr{
+    direction:ltr;
+    text-align:right;
+}
+
+ul{
+    padding-right:0px;
+}
+
+.modal-header .btn-close{
+    padding: 0px;
+    margin: 0px;
+}
+
+.card-header{
+    font-weight:bold;
+    text-align:center;
+}
+
+.alert{
+    font-weight:bold;
+    text-align:center;
+}
+
+.table{
+    margin-bottom: 0px;
+}
+
+.card-header.green{
+    background: green;
+    color: white;
+}
+
+.card-header.red{
+    background: red;
+    color: white;
+}
+
+.btn.red{
+    color: red;
+    border-color: red;
+}
+
+.btn.red.active{
+    color: white;
+    background: red;
+}
+
+.btn.red:hover{
+    border-width: 2px;
+    border-color: red;
+    color: red;
+}
+
+.btn.red.active:hover{
+    color: white;
+}
+
+.btn.green{
+    color: green;
+    border-color: green;
+}
+
+.btn.green.active{
+    color: white;
+    background: green;
+}
+
+.btn.green:hover{
+    border-width: 2px;
+    border-color: green;
+    color: green;
+}
+
+.btn.green.active:hover{
+    color: white;
+}
+
+input.green{
+    border-color: green;
+    color: green;
+    font-weight:bold;
+}
+
+input.green:focus{
+    color: green;
+}
+
+input.red{
+    border-color: red;
+    color: red;
+    font-weight:bold;
+}
+
+input.red:focus{
+    color: red;
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
+
+.modal-title.red{
+    color: red;
+}
+
+.modal-title.green{
+    color: green;
+}
+
+.answer-first{
+    font-weight: bold;
+    border-width: 3px;
+    height: 500px;
+    font-size: 10vw;
+}
+
+.answer-first:hover{
+    border-width: 3px;
+}
+
+.hex-table{
+    overflow: hidden;
+    background-color: #000;
+}
+
+.hex-row{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: -2%;
+    margin-right: -2%;
+}
+
+@font-face {
+    font-family: 'El Messiri';
+    src: url('../fonts/ElMessiri-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.hex-row:first-child .hex, .hex-row:last-child .hex{
+    background-color: green;
+}
+
+.hex-row:last-child{
+    height: 5.4vw;
+}
+
+.hex-row .hex:first-child, .hex-row .hex:last-child{
+    background-color: red;
+}
+
+.hex:nth-child(even){
+    margin-top: -5%;
+    margin-bottom: calc(5% + 0.4rem);
+}
+
+.hex:after, .hex:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 22%;
+    height: 100%;
+    background: inherit; 
+}
+
+.hex:before {
+    left: -20%;
+    clip-path: polygon(90% 0, 100% 0%, 100% 100%, 90% 100%, 0% 50%);
+}
+
+.hex:after {
+    right: -20%;
+    clip-path: polygon(0% 0%, 10% 0, 100% 50%, 10% 100%, 0 100%);
+}
+
+.hex.red{
+    background: red;
+    color: red;
+}
+
+.hex.green{
+    background: green;
+    color: green;
+}
+
+.hex.selected{
+    background: lightgray;
+    color: white;
+}
+
+.btn-group{
+    direction:ltr;
+    width:100%;
+}
+
+#timerModal *{
+    font-size:3vw!important;
+    font-weight:bold;
+    font-family: 'El Messiri', sans-serif;
+}
+
+.page-header{
+    font-family: 'El Messiri', sans-serif;
+}
+
+.star-rating .fa-star {
+    cursor: pointer;
+    font-size: 30px;
+    color: #FFD700;
+}
+
+.review-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.modal-header{
+    justify-content: space-between;
+}
+
+.modal-header .btn-close{
+    margin:0px!important;
+    padding:0px!important;
+}
+
+.alert-dismissible .btn-close{
+    left: 0px;
+    right: auto;
+}
+
+.accordion-button::after{
+    margin-right:auto;
+    margin-left:0px;
+}
+
+.accordion-button{
+    font-weight:bold;
+}
+
+.accordion{
+    margin-bottom: 10px;
+}
+
+.review-btn{
+    background: #76007e;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border:0px;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* About page styles */
+.bg-primary.bg-opacity-10 {
+    transition: all 0.3s ease;
+}
+
+.bg-primary.bg-opacity-10:hover {
+    transform: scale(1.05);
+    background-color: var(--bs-primary-rgb) !important;
+    opacity: 0.2 !important;
+}
+
+.card .bi {
+    transition: all 0.3s ease;
+}
+
+.card:hover .bi {
+    transform: translateY(-2px);
+}
+
+.text-muted {
+    color: var(--bs-gray-600) !important;
+}
+
+.input-group{
+	direction:ltr;
+}
+
+.subscribe-btn {
+	background: linear-gradient(145deg, #007bff, #0056b3);
+	color: #fff;
+	padding: 15px 30px;
+	font-size: 1.5rem;
+	border: none;
+	border-radius: 50px;
+	transition: all 0.2s ease-in-out;
+	box-shadow: 0 5px 15px rgba(0, 91, 187, 0.5);
+}
+
+.subscribe-btn:hover {
+	background: #0056b3;
+	transform: translateY(-3px);
+	box-shadow: 0 8px 20px rgba(0, 91, 187, 0.7);
+}
+
+.subscribe-container {
+	animation: fadeIn 1.5s ease-in-out;
+}
+
+.list-group{
+	padding-right: 0rem!important;
+	padding-left: 0px!important;
+	text-align: right;
+}

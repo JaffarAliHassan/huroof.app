@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+		
+		<title>العب حروف - تعلم الحروف العربية بطريقة ممتعة</title>
+		<meta name="keywords" content="مسابقة حروف, لعبة تعليمية, تعلم الحروف العربية, ألعاب تعليمية, تعليم الأطفال">
+		<meta name="description" content="مسابقة حروف هي لعبة تعليمية تفاعلية تساعد الأطفال على تعلم الحروف العربية بطريقة ممتعة وشيقة">
+		<meta property="og:title" content="مسابقة حروف هي لعبة تعليمية تفاعلية تساعد الأطفال على تعلم الحروف العربية بطريقة ممتعة وشيقة">
+		<meta property="og:description" content="مسابقة حروف هي لعبة تعليمية تفاعلية تساعد الأطفال على تعلم الحروف العربية بطريقة ممتعة وشيقة">
+		<meta property="og:locale" content="ar_BH">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://huroof.app">
+		<meta property="og:image" content="images/logo.webp">
+		<meta property="og:site_name" content="مسابقة حروف هي لعبة تعليمية تفاعلية تساعد الأطفال على تعلم الحروف العربية بطريقة ممتعة وشيقة">
+		<meta name="author" content="Huroof">
+		<meta name="robots" content="index, follow">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<link rel="shortcut icon" href="images/logo.webp">
+		<link rel="apple-touch-icon" href="images/logo.webp">
+		<link rel="apple-touch-startup-image" href="img/logo.webp">
+		<link rel="apple-touch-icon-precomposed" href="images/logo.webp">
+		
+		<meta name="google-site-verification" content="Vq1jkvz1nUMrWk58LQyCeznEhLV1SDi7NRw0UKnhpks">
+		<meta name="google-adsense-account" content="ca-pub-7163242565207500">
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-icons.min.css" rel="stylesheet">
+		<link href="css/fontawesome.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="css/play.css" rel="stylesheet">
+		
+		<script async="" src="js/adsbygoogle.js" crossorigin="anonymous"></script>
+		
+		<!-- Google tag (gtag.js) -->
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W6TKFE4L7H"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'G-W6TKFE4L7H');
+		</script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-5K5VNTLJ');</script>
+		<!-- End Google Tag Manager -->
+		
+		<!-- Schema.org markup for Google+ -->
+		<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebApplication",
+			"name": "مسابقة حروف",
+			"description": "لعبة تعليمية تفاعلية لتعلم الحروف العربية",
+			"applicationCategory": "EducationalApplication",
+			"operatingSystem": "Web",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			}
+		}
+		</script>
+		<style>
+			
+			.site-header {
+				z-index: 1040 !important;
+			}
+
+			.modal-backdrop {
+				z-index: 1040 !important;
+				background-color: rgba(0, 0, 0, 1) !important;
+			}
+			
+			a, button, input[type=button], input[type=submit]{
+				z-index: 1040 !important;
+			}
+			
+			.adsbygoogle{
+				z-index: -1040 !important;
+			}
+			
+			.google-auto-placed{
+				z-index: -1040 !important;
+			}
+			
+			div[id^="aswift_"]{
+				z-index: -1040 !important;
+			}
+			
+			iframe[id^="aswift_"]{
+				z-index: -1040 !important;
+			}
+		</style>
+	</head>
+	<body class="bg-light" ng-app="application" ng-controller="controller">
+		
+		<header class="site-header py-3 bg-white shadow-sm sticky-top mb-4">
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-center">
+					<a href="" title="الصفحة الرئيسية - مسابقة حروف" class="logo-link">
+						<img id="logo" src="images/logo.webp" alt="شعار مسابقة حروف" class="img-fluid" width="80" height="80">
+					</a>
+					<h1 class="h4 mb-0 fw-bold">
+						<ng-container ng-if="!user.activeSubscription">
+							مسابقة حروف
+						</ng-container>
+					</h1>
+				</div>
+			</div>
+		</header>
+					
+		<main class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-lg-8">
+					
+					<!-- Alerts -->
+					<div ng-class="alert.class" ng-bind="alert.message" class="alert rounded-4 shadow-sm mb-4" role="alert">
+					</div>
+					<!-- Game Board -->
+					<div class="game-board bg-white rounded-4 shadow-sm p-3 p-md-4 mb-4">
+						<div class="hex-table">
+							<div class="hex-row">
+								<div class="hex"></div>
+								<div class="hex"></div>
+								<div class="hex"></div>
+								<div class="hex"></div>
+								<div class="hex"></div>
+								<div class="hex"></div>
+								<div class="hex"></div>
+							</div>
+							<div class="hex-row">
+								<div class="hex"></div>
+								<div class="hex" ng-bind="user.letters[0].name" ng-class="user.letters[0].color"></div>
+								<div class="hex" ng-bind="user.letters[1].name" ng-class="user.letters[1].color"></div>
+								<div class="hex" ng-bind="user.letters[2].name" ng-class="user.letters[2].color"></div>
+								<div class="hex" ng-bind="user.letters[3].name" ng-class="user.letters[3].color"></div>
+								<div class="hex" ng-bind="user.letters[4].name" ng-class="user.letters[4].color"></div>
+								<div class="hex"></div>
+							</div>
+							<div class="hex-row">
+								<div class="hex"></div>
+								<div class="hex" ng-bind="user.letters[5].name" ng-class="user.letters[5].color"></div>
+								<div class="hex" ng-bind="user.letters[6].name" ng-class="user.letters[6].color"></div>
+								<div class="hex" ng-bind="user.letters[7].name" ng-class="user.letters[7].color"></div>
+								<div class="hex" ng-bind="user.letters[8].name" ng-class="user.letters[8].color"></div>
+								<div class="hex" ng-bind="user.letters[9].name" ng-class="user.letters[9].color"></div>
+								<div class="hex"></div>
+							</div>
+							<div class="hex-row">
+								<div class="hex"></div>
+								<div class="hex" ng-bind="user.letters[10].name" ng-class="user.letters[10].color"></div>
+								<div class="hex" ng-bind="user.letters[11].name" ng-class="user.letters[11].color"></div>
+								<div class="hex" ng-bind="user.letters[12].name" ng-class="user.letters[12].color"></div>
+								<div class="hex" ng-bind="user.letters[13].name" ng-class="user.letters[13].color"></div>
+								<div class="hex" ng-bind="user.letters[14].name" ng-class="user.letters[14].color"></div>
+								<div class="hex"></div>
+							</div>
+							<div class="hex-row">
+								<div class="hex"></div>
+								<div class="hex" ng-bind="user.letters[15].name" ng-class="user.letters[15].color"></div>
+								<div class="hex" ng-bind="user.letters[16].name" ng-class="user.letters[16].color"></div>
+								<div class="hex" ng-bind="user.letters[17].name" ng-class="user.letters[17].color"></div>
+								<div class="hex" ng-bind="user.letters[18].name" ng-class="user.letters[18].color"></div>
+								<div class="hex" ng-bind="user.letters[19].name" ng-class="user.letters[19].color"></div>
+								<div class="hex"></div>
+							</div>
+							<div class="hex-row">
+								<div class="hex"></div>
+								<div class="hex" ng-bind="user.letters[20].name" ng-class="user.letters[20].color"></div>
+								<div class="hex" ng-bind="user.letters[21].name" ng-class="user.letters[21].color"></div>
+								<div class="hex" ng-bind="user.letters[22].name" ng-class="user.letters[22].color"></div>
+								<div class="hex" ng-bind="user.letters[23].name" ng-class="user.letters[23].color"></div>
+								<div class="hex" ng-bind="user.letters[24].name" ng-class="user.letters[24].color"></div>
+								<div class="hex"></div>
+							</div>
+							<div class="hex-row">
+								<div class="hex"></div>
+								<div class="hex"></div>
+								<div class="hex"></div>
+								<div class="hex"></div>
+								<div class="hex"></div>
+								<div class="hex"></div>
+								<div class="hex"></div>
+							</div>
+						</div>
+							<div>
+								<div class="card rounded-4 shadow-sm mb-4" ng-hide="login" style="margin-top: 2em;">
+									<div class="card-header bg-primary text-white rounded-top-4">
+										<i class="bi bi-person-circle me-2"></i>
+										تسجيل الدخول
+									</div>
+									<div class="card-body">
+										<div class="btn-group d-flex gap-3 mb-3" role="group" aria-label="Team Selection">
+											<input id="redTeam" type="radio" class="btn-check" name="team" ng-model="member.team" value="red" ng-change="updateMember()">
+											<label class="btn red rounded-pill px-4 py-3 d-flex flex-column align-items-center" for="redTeam" ng-class="{'active':member.team == 'red'}" ng-click="updateMember()">
+												<i class="bi bi-people-fill fs-1 mb-2"></i>
+												<span>الفريق الأحمر</span>
+											</label>
+											<input id="greenTeam" type="radio" class="btn-check" name="team" ng-model="member.team" value="green" ng-change="updateMember()">
+												<label class="btn green rounded-pill px-4 py-3 d-flex flex-column align-items-center" for="greenTeam" ng-class="{'active':member.team == 'green'}" ng-click="updateMember()">
+												<i class="bi bi-people-fill fs-1 mb-2"></i>
+												<span>الفريق الأخضر</span>
+											</label>
+										</div>
+										<div class="mb-3">
+											<label class="form-label fw-bold">اسم المستخدم</label>
+											<input type="text" ng-model="member.name" class="form-control rounded-3" placeholder="ادخل اسمك" ng-change="updateMember()">
+										</div>
+										<button class="btn btn-primary rounded-pill w-100" ng-click="loginUser()" ng-disabled="member.team == null || member.name == null">
+											<i class="bi bi-box-arrow-in-right me-2"></i>
+											دخول
+										</button>
+									</div>
+								</div>
+								
+								<div class="card rounded-4 shadow-sm mb-4" ng-show="login" style="margin-top: 2em;">
+									<div class="card-header bg-primary text-white rounded-top-4">
+										<i class="bi bi-person-circle me-2"></i>
+										الإجابة أولا
+									</div>
+									<div class="card-body text-center">
+										<button class="btn form-control answer-first" ng-class="member.team" ng-show="user.state.name == 'LETTER_SELECTED'" ng-click="answerFirst()" style="font-size: 5em;">الإجابة أولا</button>
+										<h3 ng-class="user.state.team" ng-show="user.state.name != 'LETTER_SELECTED' && user.state.team != null">تم حجز الإجابة عن طريق الفريق {{teamsNames[user.state.team]}}</h3>
+										<h3 ng-bind="formatSeconds(seconds)" ng-class="member.team" ng-show="(user.state.name == 'FIRST_ANSWER' || user.state.name == 'SECOND_ANSWER') && member.team == user.state.team"></h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div></main>
+			
+			<!-- Modals -->
+			<div id="timerModal" class="modal fade">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" ng-class="user.state.team">
+								الفريق {{teamsNames[user.state.team]}}
+							</h5>
+						</div>
+						<div class="modal-body">
+							<div class="card">
+								<div class="card-header" ng-class="user.state.team" ng-bind="user.state.name == 'FIRST_ANSWER' ? user.state.userName : 'الفريق ' + teamsNames[user.state.team]">
+								</div>
+								<div class="card-body text-center">
+									<h2 ng-bind="formatSeconds(seconds)" ng-class="user.state.team"></h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            			
+			<audio id="letter" style="display:none" src="media/letter.wav"></audio>
+			<audio id="correct" style="display:none" src="media/correct.wav"></audio>
+			<audio id="wrong" style="display:none" src="media/wrong.wav"></audio>
+			<audio id="finish" style="display:none" src="media/finish.wav"></audio>
+			<audio id="timer" style="display:none" src="media/timer.wav"></audio>
+		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/firebase-app.js"></script>
+		<script type="text/javascript" src="js/firebase-auth.js"></script>
+		<script type="text/javascript" src="js/firebase-database.js"></script>
+		<script type="text/javascript" src="js/moment.min.js"></script>
+		<script type="text/javascript" src="js/firebase.js"></script>
+		<script type="text/javascript" src="js/play.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script>
+			$(".site-header, .site-header *").on("click", function(event){
+
+				console.log(".site-header click", event);
+				
+				event.stopPropagation();
+			});
+			
+			$(".modal, .modal *").on("click", function(event){
+
+				console.log(".modal click", event);
+				
+				event.stopPropagation();
+			});
+			
+			$("a, button, input[type=button], input[type=submit]").on("click", function(event){
+
+				console.log("a, button, input[type=button], input[type=submit] click", event);
+				
+				event.stopPropagation();
+			});
+			
+			$(".adsbygoogle, .adsbygoogle *").on("click", function(event){
+				
+				console.log(".adsbygoogle click ", event);
+				
+				let display = {
+					"8381224338":"header",
+					"6876570971":"section",
+					"9007910297":"footer"
+				};
+				
+				let adsbygoogle = new Object();
+				adsbygoogle.id = moment().valueOf();
+				adsbygoogle.target = $(event.target).prop("outerHTML");
+				adsbygoogle.display = display[$(this).attr("data-ad-slot")];
+				adsbygoogle.time = moment().format("DD-MM-YYYY HH:mm:ss");
+				adsbygoogle.path = window.location.pathname;
+				adsbygoogle.modal = $("body").hasClass("modal-open");
+				adsbygoogle.width = $(this).width();
+				adsbygoogle.height = $(this).height();
+				adsbygoogle.event = event;
+				adsbygoogle.originalEvent = event.originalEvent;
+				
+				if(window.location.search != null
+					&& (window.location.search.startsWith("?view=")
+						|| window.location.search.startsWith("?user=")
+						|| window.location.search.startsWith("?admin="))){
+
+					let index = window.location.search.indexOf("=");
+					
+					adsbygoogle.role = window.location.search.substring(1, index);
+					adsbygoogle.user = window.location.search.substring(index + 1);
+					
+				}else{
+					
+					adsbygoogle.role = "admin";
+					adsbygoogle.user = localStorage.getItem("user");
+				}
+				
+				firebase.database().ref("adsbygoogles").child(adsbygoogle.id).set(adsbygoogle);
+			});
+			
+			let timeout = null;
+			
+			$(document).on("touchstart", function(){
+				
+				$(".adsbygoogle").css("pointer-events", "none");
+				$(".google-auto-placed").css("pointer-events", "none");
+				$("div[id^='aswift_']").css("pointer-events", "none");
+				$("iframe[id^='aswift_']").css("pointer-events", "none");
+				
+				if(timeout != null){
+					clearTimeout(timeout);
+				}
+				
+				timeout = setTimeout(function(){
+					$(".adsbygoogle").css("pointer-events", "auto");
+					$(".google-auto-placed").css("pointer-events", "auto");
+					$("div[id^='aswift_']").css("pointer-events", "auto");
+					$("iframe[id^='aswift_']").css("pointer-events", "auto");
+				}, 1000);
+			});
+			
+			$(document).on("touchmove", function(){
+				
+				$(".adsbygoogle").css("pointer-events", "none");
+				$(".google-auto-placed").css("pointer-events", "none");
+				$("div[id^='aswift_']").css("pointer-events", "none");
+				$("iframe[id^='aswift_']").css("pointer-events", "none");
+				
+				if(timeout != null){
+					clearTimeout(timeout);
+				}
+				
+				timeout = setTimeout(function(){
+					$(".adsbygoogle").css("pointer-events", "auto");
+					$(".google-auto-placed").css("pointer-events", "auto");
+					$("div[id^='aswift_']").css("pointer-events", "auto");
+					$("iframe[id^='aswift_']").css("pointer-events", "auto");
+				}, 1000);
+			});
+			
+			$(document).on("touchend", function(){
+				
+				$(".adsbygoogle").css("pointer-events", "none");
+				$(".google-auto-placed").css("pointer-events", "none");
+				$("div[id^='aswift_']").css("pointer-events", "none");
+				$("iframe[id^='aswift_']").css("pointer-events", "none");
+				
+				if(timeout != null){
+					clearTimeout(timeout);
+				}
+				
+				timeout = setTimeout(function(){
+					$(".adsbygoogle").css("pointer-events", "auto");
+					$(".google-auto-placed").css("pointer-events", "auto");
+					$("div[id^='aswift_']").css("pointer-events", "auto");
+					$("iframe[id^='aswift_']").css("pointer-events", "auto");
+				}, 1000);
+			});
+			
+		</script>
+	
+</body></html>
